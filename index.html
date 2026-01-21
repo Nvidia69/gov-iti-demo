@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Industrial Training Institute, Ayodhya</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Official Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- 1. Top Bar (Contact Strip) -->
+    <div class="bg-gray-900 text-gray-300 py-2 text-xs md:text-sm border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex gap-4">
+                <span class="flex items-center gap-1 hover:text-white transition cursor-pointer"><i data-lucide="phone" class="w-3 h-3"></i> 05278-222XXX</span>
+                <span class="flex items-center gap-1 hover:text-white transition cursor-pointer"><i data-lucide="mail" class="w-3 h-3"></i> gitiayodhya@gmail.com</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition">Skip to Main Content</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition">Screen Reader Access</a>
+                <span>|</span>
+                <div class="flex gap-2 items-center">
+                    <a href="#" class="hover:text-blue-400"><i data-lucide="facebook" class="w-3 h-3"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i data-lucide="twitter" class="w-3 h-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Logo Section (White Background) -->
+    <div class="bg-white py-4 shadow-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <!-- Logo & Text -->
+            <div class="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
+                <div class="h-20 w-20 bg-blue-900 rounded-full flex items-center justify-center text-white border-4 border-yellow-500 shadow-lg flex-shrink-0">
+                    <i data-lucide="landmark" class="h-10 w-10"></i>
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-blue-900 uppercase leading-none tracking-tight">Government ITI Ayodhya</h1>
+                    <p class="text-sm md:text-base text-gray-600 font-semibold mt-1">Industrial Training Institute, Beniganj, Ayodhya</p>
+                    <p class="text-xs text-yellow-600 font-bold uppercase tracking-widest mt-0.5">Government of Uttar Pradesh | SCVT/NCVT Affiliated</p>
+                </div>
+            </div>
+            
+            <!-- Gov Logo (Right Side - Optional) -->
+            <div class="hidden md:block opacity-80">
+                <div class="flex flex-col items-center">
+                    <i data-lucide="award" class="h-12 w-12 text-gray-400"></i>
+                    <span class="text-xs font-bold text-gray-500 mt-1">Skill India</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Main Navigation Menu (Blue Strip) -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50 border-t-4 border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex w-full justify-center space-x-1">
+                    <a href="#home" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition border-r border-blue-800 flex items-center gap-1"><i data-lucide="home" class="w-4 h-4"></i> Home</a>
+                    
+                    <a href="#about" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition border-r border-blue-800">About Us</a>
+                    
+                    <a href="#trades" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition border-r border-blue-800">Trades</a>
+                    
+                    <a href="#apply" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition border-r border-blue-800">Admission</a>
+                    
+                    <a href="#results" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition border-r border-blue-800">Result</a>
+                    
+                    <a href="#contact" class="hover:bg-blue-800 px-4 py-3 text-sm font-bold uppercase transition">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden w-full justify-between items-center px-2">
+                    <span class="font-bold uppercase tracking-widest">Menu</span>
+                    <button onclick="toggleMenu()" class="text-white hover:bg-blue-800 p-2 rounded-md focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu List -->
+        <div class="hidden md:hidden bg-blue-800 border-t border-blue-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">Home</a>
+                <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">About Us</a>
+                <a href="#trades" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">Trades</a>
+                <a href="#apply" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">Admission</a>
+                <a href="#results" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">Result</a>
+                <a href="#contact" onclick="toggleMenu()" class="block px-3 py-2 text-base font-medium hover:bg-blue-700 rounded transition">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Ticker -->
+    <div class="bg-gray-100 py-1 border-b border-gray-300">
+        <div class="max-w-7xl mx-auto flex items-center px-4">
+            <div class="bg-red-600 text-white px-3 py-1 text-xs font-bold uppercase rounded-sm mr-2 flex-shrink-0">Updates</div>
+            <div class="marquee-container w-full overflow-hidden text-blue-900 text-sm font-medium">
+                <div class="marquee-content">
+                    <span class="mx-8">:: Admission Open for Session 2024-25 in All Trades ::</span>
+                    <span class="mx-8">:: UP Scholarship Last Date Extended ::</span>
+                    <span class="mx-8">:: Practical Exam Schedule Released ::</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-[500px] flex items-center justify-center text-center px-4">
+        <div class="bg-blue-900/80 backdrop-blur-sm p-10 rounded-xl shadow-2xl max-w-4xl mx-auto text-white border border-blue-500/30">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-yellow-400 tracking-wide">SKILL INDIA, KUSHAL BHARAT</h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-100">Government Industrial Training Institute, Ayodhya welcomes you.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#trades" class="bg-yellow-500 text-blue-900 font-bold py-3 px-8 rounded hover:bg-yellow-400 transition shadow-lg uppercase text-sm tracking-wide">Our Trades</a>
+                <a href="#apply" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded hover:bg-white hover:text-blue-900 transition shadow-lg uppercase text-sm tracking-wide">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal Message Section (Added) -->
+    <section class="py-16 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <!-- Principal Image -->
+                <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+                    <div class="p-2 border-4 border-gray-100 shadow-xl rounded-lg bg-white transform md:-rotate-2 hover:rotate-0 transition duration-300">
+                         <!-- Placeholder Image for Principal -->
+                        <img src="https://gitiayodhya.com/assets/images/078_Principal.jpg" alt="Principal" class="w-64 h-72 object-cover rounded shadow-inner">
+                        <div class="text-center mt-4 pb-2">
+                            <h4 class="font-bold text-blue-900 text-xl tracking-tight">Shri Arun Kumar</h4>
+                            <div class="w-16 h-1 bg-yellow-500 mx-auto my-2 rounded"></div>
+                            <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Principal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Principal Text -->
+                <div class="w-full md:w-2/3">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-900 text-white p-2 rounded-full"><i data-lucide="quote" class="w-5 h-5"></i></div>
+                        <h2 class="text-3xl font-bold text-blue-900 border-l-4 border-yellow-500 pl-4">Principal's Message</h2>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm relative">
+                        <!-- Background Quote Icon opacity -->
+                        <i data-lucide="quote" class="w-24 h-24 text-gray-200 absolute top-4 right-4 opacity-20 transform rotate-180"></i>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed italic relative z-10">
+                            "Technical Education plays a vital role in human resource development of the country by creating skilled manpower, enhancing industrial productivity and improving the quality of life of its people. The industries, mechanized systems and scientific research centres all over the world prove beyond doubt that our tie with the past is snapped and instead of bare hands we must use machines and technological devices for all-round development and regeneration of human society. So, there is huge demand for technical education in modern age. I am confident that the Institute, with its rich legacy, will continue to shape the future of the young minds of our country and transform their potential into successful careers resulting."
+                        </p>
+                        
+                        <div class="mt-8 flex items-center justify-end gap-4 border-t border-gray-200 pt-4">
+                            <div class="text-right">
+                                <span class="font-bold text-blue-900 text-lg block font-serif">Shri Arun Kumar</span>
+                                <span class="text-gray-500 text-sm font-semibold tracking-wide">( Principal )</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <img src="https://gitiayodhya.com/upload/album/1700822445IMG-20171005-WA0026.jpg" alt="College Building" class="rounded-lg shadow-xl w-full hover:scale-[1.02] transition duration-500">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4 border-l-4 border-yellow-500 pl-4">About Our Institute</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-lg">
+                        Government Industrial Training Institute, Ayodhya is a premier institute in Uttar Pradesh established with the objective of providing technical education to the youth. We are affiliated with NCVT (National Council for Vocational Training) and SCVT.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Our campus is equipped with state-of-the-art workshops, computer labs, and a dedicated placement cell to ensure our students are industry-ready.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded shadow-sm border-b-4 border-blue-900 text-center">
+                            <h3 class="text-3xl font-bold text-blue-900">1963</h3>
+                            <p class="text-xs text-gray-600 uppercase font-bold tracking-wider mt-1">Established</p>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm border-b-4 border-yellow-500 text-center">
+                            <h3 class="text-3xl font-bold text-blue-900">12+</h3>
+                            <p class="text-xs text-gray-600 uppercase font-bold tracking-wider mt-1">Trades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trades Section -->
+    <section id="trades" class="py-16 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900">Available Trades</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Electrician -->
+                <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition border-t-4 border-blue-900 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-900 transition">Electrician</h3>
+                        <i data-lucide="zap" class="text-yellow-500 w-6 h-6"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">Duration: 2 Years (NCVT)</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm hover:underline flex items-center gap-1">View Details <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+                <!-- Fitter -->
+                <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition border-t-4 border-blue-900 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-900 transition">Fitter</h3>
+                        <i data-lucide="settings" class="text-yellow-500 w-6 h-6"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">Duration: 2 Years (NCVT)</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm hover:underline flex items-center gap-1">View Details <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+                <!-- COPA -->
+                <div class="bg-gray-50 p-6 rounded shadow hover:shadow-lg transition border-t-4 border-green-600 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 group-hover:text-green-700 transition">COPA</h3>
+                        <i data-lucide="monitor" class="text-green-500 w-6 h-6"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">Duration: 1 Year (SCVT)</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm hover:underline flex items-center gap-1">View Details <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section id="apply" class="py-16 bg-blue-900 scroll-mt-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-2xl overflow-hidden">
+                <div class="px-8 py-6 border-b border-gray-200 bg-gray-50">
+                    <h2 class="text-2xl font-bold text-blue-900">Online Admission Form (2024-25)</h2>
+                    <p class="text-sm text-gray-500">Please fill all details correctly as per High School Certificate.</p>
+                </div>
+                <form class="p-8 grid grid-cols-1 md:grid-cols-2 gap-6" onsubmit="event.preventDefault(); alert('Application Submitted!');">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name</label>
+                        <input type="text" class="w-full border rounded p-3 focus:outline-none focus:border-blue-900 bg-gray-50 focus:bg-white transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Father's Name</label>
+                        <input type="text" class="w-full border rounded p-3 focus:outline-none focus:border-blue-900 bg-gray-50 focus:bg-white transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Mobile Number</label>
+                        <input type="tel" class="w-full border rounded p-3 focus:outline-none focus:border-blue-900 bg-gray-50 focus:bg-white transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Trade Preference</label>
+                        <select class="w-full border rounded p-3 focus:outline-none focus:border-blue-900 bg-white">
+                            <option>Electrician</option>
+                            <option>Fitter</option>
+                            <option>COPA</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button class="w-full bg-yellow-500 text-blue-900 font-bold py-4 rounded hover:bg-yellow-400 transition shadow-lg uppercase tracking-wide">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="results" class="py-16 bg-gray-100 scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-8">Check Result</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg inline-block w-full md:w-2/3 border-t-4 border-blue-900">
+                <input type="text" id="rollInput" placeholder="Enter Roll Number" class="w-full border-2 border-gray-200 rounded p-3 mb-4 focus:border-blue-900 outline-none transition">
+                <button onclick="alert('Result Loaded for Roll No: ' + document.getElementById('rollInput').value)" class="w-full bg-blue-900 text-white font-bold py-3 rounded hover:bg-blue-800 transition shadow">Search Result</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-12 border-t-4 border-yellow-500 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4 uppercase flex items-center gap-2"><i data-lucide="map-pin" class="text-yellow-500 w-5 h-5"></i> Contact Us</h4>
+                <div class="space-y-4 pl-1">
+                    <p class="leading-relaxed">Government Industrial Training Institute,<br>Beniganj, Ayodhya, Uttar Pradesh - 224001</p>
+                    <p class="flex items-center gap-3"><i data-lucide="phone" class="text-yellow-500 flex-shrink-0 w-4 h-4"></i> 05278-222XXX</p>
+                    <p class="flex items-center gap-3"><i data-lucide="mail" class="text-yellow-500 flex-shrink-0 w-4 h-4"></i> gitiayodhya@gmail.com</p>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4 uppercase flex items-center gap-2"><i data-lucide="link" class="text-yellow-500 w-5 h-5"></i> Quick Links</h4>
+                <ul class="space-y-3 pl-1">
+                    <li><a href="#about" class="hover:text-yellow-500 transition flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> About Institute</a></li>
+                    <li><a href="#admission" class="hover:text-yellow-500 transition flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> Admission Process</a></li>
+                    <li><a href="https://scvtup.in" target="_blank" class="hover:text-yellow-500 transition flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> SCVT UP Portal</a></li>
+                    <li><a href="https://ncvtmis.gov.in" target="_blank" class="hover:text-yellow-500 transition flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3"></i> NCVT MIS Portal</a></li>
+                </ul>
+            </div>
+
+            <div>
+                 <h4 class="text-white font-bold text-lg mb-4 uppercase flex items-center gap-2"><i data-lucide="navigation" class="text-yellow-500 w-5 h-5"></i> Location</h4>
+                 <div class="bg-gray-800 h-32 rounded flex items-center justify-center border border-gray-700 hover:border-gray-500 transition cursor-pointer">
+                     <span class="text-xs text-gray-500 flex flex-col items-center gap-1"><i data-lucide="map" class="w-6 h-6"></i> Click to view on Google Maps</span>
+                 </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2024 Government Industrial Training Institute, Ayodhya. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
